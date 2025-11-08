@@ -58,7 +58,7 @@
 &kp TAB     &kp B      &kp Y         &kp O         &kp U   &kp APOS     &kp DOWN_ARROW   &kp SEMI   &kp L      &kp D      &kp W            &kp V       &kp Z
 &kp LSHIFT  &kp C      &kp I         &kp E         &kp A   &kp COMMA    &kp LEFT_ARROW   &kp DOT    &kp H      &kp T      &kp S            &kp N       &kp R
 &kp CAPS    &kp G      &kp X         &kp J         &kp K   &kp LALT     &kp RIGHT_ARROW  &kp FSLH   &kp Q      &kp F      &kp P            &kp M       &kp C_MUTE
-&kp C_VOL_DN &kp C_VOL_UP &kp BSPC   &kp SPACE     &mo 1   &kp SPACE    &kp ENTER        &kp RCTRL  &kp RSHIFT &kp ENTER  &kp RGUI         &mo 2
+&kp C_VOL_DN &kp C_VOL_UP &kp BSPC   &kp 1         &mo SPACE   &kp SPACE    &kp ENTER        &kp RCTRL  &kp RSHIFT &kp ENTER  &kp RGUI         &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -71,7 +71,7 @@
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
 &trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp C_MUTE  &bt BT_CLR    &bt BT_CLR_ALL          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
