@@ -23,6 +23,22 @@
 
 如需3D打印的模型文件或者键盘有任何异常和故障，请联系380465425@qq.com
 
+## 📚 完整文档 | Comprehensive Documentation
+
+**🇺🇸 English Documentation Available!**
+
+For complete step-by-step guides, see the [docs/](./docs/) folder:
+
+- **[docs/PROJECT_OVERVIEW.md](./docs/PROJECT_OVERVIEW.md)** - Complete project documentation
+- **[docs/BUILD_GUIDE.md](./docs/BUILD_GUIDE.md)** - Build and flash instructions
+- **[docs/KEYMAP_GUIDE.md](./docs/KEYMAP_GUIDE.md)** - Keymap customization guide
+- **[docs/QUICK_REFERENCE.md](./docs/QUICK_REFERENCE.md)** - Quick reference cheat sheet
+
+**新手入门**: 从 [docs/README.md](./docs/README.md) 开始阅读！  
+**Getting Started**: Start with [docs/README.md](./docs/README.md)!
+
+---
+
 ## Sofle键位图
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)

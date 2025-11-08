@@ -22,6 +22,37 @@
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact [380465425@qq.com](mailto:380465425@qq.com)
 
+## 📚 Comprehensive Documentation
+
+**Complete step-by-step guides available!**
+
+For detailed instructions, see the [docs/](./docs/) folder:
+
+- **[docs/PROJECT_OVERVIEW.md](./docs/PROJECT_OVERVIEW.md)** - Complete project documentation
+  - Repository structure explained
+  - How ZMK firmware works
+  - GitHub Actions workflow details
+  
+- **[docs/BUILD_GUIDE.md](./docs/BUILD_GUIDE.md)** - Build and flash instructions
+  - Step-by-step firmware building
+  - Flashing to your keyboard
+  - Troubleshooting guide
+  
+- **[docs/KEYMAP_GUIDE.md](./docs/KEYMAP_GUIDE.md)** - Keymap customization guide
+  - Understanding keymap syntax
+  - Complete key code reference
+  - Adding layers, combos, macros
+  - Converting from QMK (byou.json)
+  
+- **[docs/QUICK_REFERENCE.md](./docs/QUICK_REFERENCE.md)** - Quick reference cheat sheet
+  - One-page layout overview
+  - Common tasks
+  - Troubleshooting shortcuts
+
+**Getting Started**: Start with [docs/README.md](./docs/README.md)!
+
+---
+
 ## Sofle Keymap
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)
