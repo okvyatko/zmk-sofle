@@ -38,6 +38,103 @@
     };
 
     behaviors {
+        // Windows window snapping
+        win_snap_left: win_snap_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT)>;
+        };
+        win_snap_right: win_snap_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT)>;
+        };
+        win_snap_up: win_snap_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(UP)>;
+        };
+        win_snap_down: win_snap_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(DOWN)>;
+        };
+
+        // Mac window snapping (Rectangle/Magnet style)
+        mac_snap_left: mac_snap_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LEFT))>;
+        };
+        mac_snap_right: mac_snap_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(RIGHT))>;
+        };
+        mac_snap_up: mac_snap_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(UP))>;
+        };
+        mac_snap_down: mac_snap_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(DOWN))>;
+        };
+
+        // Common macros - Windows versions
+        win_select_all: win_select_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>;
+        };
+        win_copy: win_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+        };
+        win_paste: win_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+        };
+        win_cut: win_cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+        };
+        win_undo: win_undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+        };
+
+        // Common macros - Mac versions
+        mac_select_all: mac_select_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(A)>;
+        };
+        mac_copy: mac_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>;
+        };
+        mac_paste: mac_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(V)>;
+        };
+        mac_cut: mac_cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(X)>;
+        };
+        mac_undo: mac_undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z)>;
+        };
     };
 
     combos {
@@ -54,11 +151,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp DELETE
 &kp TAB     &kp B      &kp Y         &kp O         &kp U   &kp APOS     &kp DOWN_ARROW   &kp SEMI   &kp L      &kp D      &kp W            &kp V       &kp Z
 &kp LSHIFT  &kp C      &kp I         &kp E         &kp A   &kp COMMA    &kp LEFT_ARROW   &kp DOT    &kp H      &kp T      &kp S            &kp N       &kp Q
 &kp CAPS    &kp G      &kp X         &kp J         &kp K   &kp LALT     &kp RIGHT_ARROW  &kp FSLH   &kp R      &kp M      &kp F            &kp P       &kp C_MUTE
-&trans &kp C_VOL_DN &kp C_VOL_UP &kp BSPC   &kp SPACE     &mo 1          &kp SPACE      &kp RCTRL  &kp RSHIFT &kp ENTER  &kp RGUI         &mo 2
+&kp BSPC &kp C_VOL_DN &kp C_VOL_UP &kp BSPC   &kp SPACE     &mo 1          &kp SPACE      &kp RCTRL  &kp RSHIFT &kp ENTER  &kp RGUI         &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -67,11 +164,11 @@
 
         layer_1 {  
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &bt BT_CLR    &bt BT_CLR_ALL          &trans           &trans           &trans             &mkp LCLK       &bt BT_CLR    &bt BT_CLR_ALL           &trans      &trans     &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &win_snap_up     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
+&trans      &win_select_all  &win_copy       &win_paste       &win_cut         &win_undo          &win_snap_down   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &win_snap_left   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &win_snap_right  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &to 3
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
@@ -92,27 +189,29 @@
         };
 
         layer_3 {
+            // Mac-optimized base layer - Toggle with Layer1+F12
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp DELETE
+&kp TAB     &kp B      &kp Y         &kp O         &kp U   &kp APOS     &kp DOWN_ARROW   &kp SEMI   &kp L      &kp D      &kp W            &kp V       &kp Z
+&kp LSHIFT  &kp C      &kp I         &kp E         &kp A   &kp COMMA    &kp LEFT_ARROW   &kp DOT    &kp H      &kp T      &kp S            &kp N       &kp Q
+&kp CAPS    &kp G      &kp X         &kp J         &kp K   &kp LALT     &kp RIGHT_ARROW  &kp FSLH   &kp R      &kp M      &kp F            &kp P       &kp C_MUTE
+&kp BSPC &kp C_VOL_DN &kp C_VOL_UP &kp BSPC   &kp SPACE     &mo 4          &kp SPACE      &kp LCMD   &kp RSHIFT &kp ENTER  &kp RCTRL        &mo 2
             >;
 
-            display-name = "layer3";
-            sensor-bindings = <&scroll_encoder>;
+            display-name = "MAC";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_4 {
+            // Mac function layer - accessed from Layer 3
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mac_snap_up     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
+&trans      &mac_select_all  &mac_copy       &mac_paste       &mac_cut         &mac_undo          &mac_snap_down   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mac_snap_left   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mac_snap_right  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &to 0
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
-         display-name = "layer4";
+         display-name = "MACFN";
             sensor-bindings = <&scroll_encoder>;
         };
     };
