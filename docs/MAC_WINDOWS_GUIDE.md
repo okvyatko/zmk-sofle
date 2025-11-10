@@ -8,33 +8,13 @@ Your keyboard now supports both Windows and Mac with dedicated layouts and featu
 
 ## Key Changes Summary
 
-### Layer 0 (Windows Base)
+### Layer 0 (Mac Base) - DEFAULT
 - **Top-right key**: Changed from `BACKSPACE` to `DELETE`
 - **First thumb key**: Added `BACKSPACE` for easy access
-- Layout optimized for Windows/PC usage
+- **Right-hand modifiers**: `CMD` key for macOS
+- Layout optimized for Mac usage (primary)
 
-### Layer 1 (Windows Function Layer)
-- **Joystick/Nav cluster**: Now snaps windows
-  - Up: Maximize window (Win+Up)
-  - Down: Restore/Minimize (Win+Down)
-  - Left: Snap window left (Win+Left)
-  - Right: Snap window right (Win+Right)
-- **Left home row**: Common macros
-  - B→A: Select All (Ctrl+A)
-  - Y→A: Copy (Ctrl+C)
-  - O→A: Paste (Ctrl+V)
-  - U→A: Cut (Ctrl+X)
-  - '→A: Undo (Ctrl+Z)
-- **Bottom-right corner**: `to 3` - Switch to Mac mode
-
-### Layer 3 (Mac Base)
-- Same letter layout as Layer 0
-- **Key differences**:
-  - Right-hand modifiers: `CMD` instead of `RGUI`
-  - Optimized for macOS shortcuts
-- Access Layer 4 (Mac function layer) via left thumb FN key
-
-### Layer 4 (Mac Function Layer)
+### Layer 1 (Mac Function Layer)
 - **Joystick/Nav cluster**: Mac window snapping (Rectangle/Magnet style)
   - Up: Maximize window (Ctrl+Opt+Up)
   - Down: Restore (Ctrl+Opt+Down)
@@ -46,38 +26,53 @@ Your keyboard now supports both Windows and Mac with dedicated layouts and featu
   - O→A: Paste (Cmd+V)
   - U→A: Cut (Cmd+X)
   - '→A: Undo (Cmd+Z)
-- **Bottom-right corner**: `to 0` - Switch back to Windows mode
+- **Bottom-right corner**: `to 3` - Switch to Windows mode
+
+### Layer 3 (Windows Base)
+- Same letter layout as Layer 0
+- **Key differences**:
+  - Right-hand modifiers: `RGUI` (Windows key) instead of `CMD`
+  - Optimized for Windows shortcuts
+- Access Layer 4 (Windows function layer) via left thumb FN key
+
+### Layer 4 (Windows Function Layer)
+- **Joystick/Nav cluster**: Windows window snapping
+  - Up: Maximize window (Win+Up)
+  - Down: Restore/Minimize (Win+Down)
+  - Left: Snap window left (Win+Left)
+  - Right: Snap window right (Win+Right)
+- **Left home row**: Windows macros
+  - B→A: Select All (Ctrl+A)
+  - Y→A: Copy (Ctrl+C)
+  - O→A: Paste (Ctrl+V)
+  - U→A: Cut (Ctrl+X)
+  - '→A: Undo (Ctrl+Z)
+- **Bottom-right corner**: `to 0` - Switch back to Mac mode
 
 ---
 
 ## How to Use
 
-### Switching Between Windows and Mac Modes
+### Switching Between Mac and Windows Modes
 
-#### To Mac Mode:
+**Default mode**: Mac (Layer 0)
+
+#### To Windows Mode:
 1. Hold left thumb FN key (activates Layer 1)
-2. Press the bottom-right key (was `&trans`, now `to 3`)
-3. You're now on Layer 3 (Mac base layer)
+2. Press the bottom-right key (F12 position, `to 3`)
+3. You're now on Layer 3 (Windows base layer)
 
-#### Back to Windows Mode:
+#### Back to Mac Mode:
 1. Hold left thumb FN key (activates Layer 4 from Layer 3)
-2. Press the bottom-right key (`to 0`)
-3. You're back on Layer 0 (Windows base layer)
+2. Press the bottom-right key (F12 position, `to 0`)
+3. You're back on Layer 0 (Mac base layer)
 
 ### Window Snapping
 
-#### Windows (Layer 1):
-1. Hold left thumb FN key
-2. Use nav cluster:
-   - Up arrow: Maximize
-   - Down arrow: Restore/Minimize
-   - Left arrow: Snap left half
-   - Right arrow: Snap right half
-
-#### Mac (Layer 4):
+#### Mac (Layer 1) - DEFAULT:
 **Prerequisites**: Install [Rectangle](https://rectangleapp.com/) or [Magnet](https://magnet.crowdcafe.com/) for window management
 
-1. Hold left thumb FN key (from Layer 3)
+1. Hold left thumb FN key
 2. Use nav cluster:
    - Up arrow: Maximize (Ctrl+Opt+Up)
    - Down arrow: Restore (Ctrl+Opt+Down)
@@ -86,9 +81,17 @@ Your keyboard now supports both Windows and Mac with dedicated layouts and featu
 
 **Note**: Configure Rectangle/Magnet to use `Ctrl+Option+Arrow` shortcuts to match the keyboard layout.
 
+#### Windows (Layer 4):
+1. Hold left thumb FN key (from Layer 3/Windows mode)
+2. Use nav cluster:
+   - Up arrow: Maximize
+   - Down arrow: Restore/Minimize
+   - Left arrow: Snap left half
+   - Right arrow: Snap right half
+
 ### Common Macros
 
-Both Windows (Layer 1) and Mac (Layer 4) have the same macro key positions on the left home row:
+Both Mac (Layer 1) and Windows (Layer 4) have the same macro key positions on the left home row:
 
 ```
 Position on Layer 1/4:
@@ -99,19 +102,19 @@ Position on Layer 1/4:
 └──────┴────┴────┴────┴────┴─────┘
 ```
 
-**Windows shortcuts** (Layer 1):
-- **Select All**: Ctrl+A
-- **Copy**: Ctrl+C
-- **Paste**: Ctrl+V
-- **Cut**: Ctrl+X
-- **Undo**: Ctrl+Z
-
-**Mac shortcuts** (Layer 4):
+**Mac shortcuts** (Layer 1) - DEFAULT:
 - **Select All**: Cmd+A
 - **Copy**: Cmd+C
 - **Paste**: Cmd+V
 - **Cut**: Cmd+X
 - **Undo**: Cmd+Z
+
+**Windows shortcuts** (Layer 4):
+- **Select All**: Ctrl+A
+- **Copy**: Ctrl+C
+- **Paste**: Ctrl+V
+- **Cut**: Ctrl+X
+- **Undo**: Ctrl+Z
 
 ---
 
@@ -243,12 +246,12 @@ While ZMK doesn't have automatic OS detection, you could:
 ### Layer Map
 
 ```
-Layer 0: Windows Base (default)
-  ├─ Layer 1: Windows Function + Macros (FN key)
+Layer 0: Mac Base (default)
+  ├─ Layer 1: Mac Function + Macros (FN key)
   └─ Layer 2: System/Bluetooth (right FN key)
 
-Layer 3: Mac Base (toggle from Layer 1)
-  ├─ Layer 4: Mac Function + Macros (FN key)
+Layer 3: Windows Base (toggle from Layer 1)
+  ├─ Layer 4: Windows Function + Macros (FN key)
   └─ Layer 2: System/Bluetooth (right FN key)
 ```
 
@@ -256,11 +259,11 @@ Layer 3: Mac Base (toggle from Layer 1)
 
 | Action | From Layer | Keys |
 |--------|-----------|------|
-| Switch to Mac | 1 (Windows FN) | FN + F12 (bottom-right) |
-| Switch to Windows | 4 (Mac FN) | FN + F12 (bottom-right) |
+| Switch to Windows | 1 (Mac FN) | FN + F12 (bottom-right) |
+| Switch to Mac | 4 (Windows FN) | FN + F12 (bottom-right) |
 | Window snap left | 1 or 4 | FN + Left arrow |
 | Window snap right | 1 or 4 | FN + Right arrow |
-| Select all + paste | 1 or 4 | FN + A, release FN, FN + Paste |
+| Select all + paste | 1 or 4 | FN + B, release FN, FN + O |
 
 ---
 
@@ -268,10 +271,11 @@ Layer 3: Mac Base (toggle from Layer 1)
 
 1. **Build the firmware** via GitHub Actions
 2. **Flash both halves** (right first, then left)
-3. **Test on Windows**: Try window snapping and macros
-4. **Install Rectangle on Mac** if you use macOS
-5. **Test mode switching**: Switch between Windows and Mac modes
-6. **Customize further**: Add your own macros or adjust key positions
+3. **Install Rectangle on Mac**: Download from https://rectangleapp.com (free)
+4. **Configure Rectangle**: Set shortcuts to Ctrl+Option+Arrows
+5. **Test on Mac**: Try window snapping and macros (default mode)
+6. **Test Windows mode**: Switch with FN+F12, try Windows snapping
+7. **Customize further**: Add your own macros or adjust key positions
 
 ---
 
@@ -284,7 +288,7 @@ All macros are defined in the `behaviors` section using `zmk,behavior-macro`. Th
 - `&mo X`: Momentary layer (active while held)
 - `&to X`: Toggle to layer (stays until switched)
 
-Layer 0 and Layer 3 are "base" layers you toggle between. Layers 1, 2, and 4 are accessed momentarily with FN keys.
+Layer 0 (Mac) and Layer 3 (Windows) are "base" layers you toggle between. Layers 1, 2, and 4 are accessed momentarily with FN keys. Mac is the default since you use it primarily.
 
 ### Modifier Keys
 - Windows uses `LGUI`/`RGUI` (Windows key)
@@ -293,5 +297,6 @@ Layer 0 and Layer 3 are "base" layers you toggle between. Layers 1, 2, and 4 are
 
 ---
 
-**Last Updated**: 2025-11-09  
-**ZMK Version**: v0.3.0
+**Last Updated**: 2025-11-10  
+**ZMK Version**: v0.3.0  
+**Default OS**: macOS
