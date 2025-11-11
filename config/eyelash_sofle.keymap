@@ -167,8 +167,8 @@
             // Mac function layer
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mac_snap_up     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
-&trans      &mac_select_all  &mac_copy       &mac_paste       &mac_cut         &mac_undo          &mac_snap_down   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mac_snap_left   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &kp TILDE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mac_undo          &mac_snap_down   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
+&trans      &mac_copy        &mac_paste      &mac_select_all  &mac_cut         &mkp MB4           &mac_snap_left   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mac_snap_right  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &to 3
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
