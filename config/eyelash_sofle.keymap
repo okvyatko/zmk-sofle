@@ -60,26 +60,26 @@
             bindings = <&kp LG(DOWN)>;
         };
 
-        // Mac window snapping (Rectangle/Magnet style)
+        // Mac native window snapping (Globe/Fn + Control + Arrow)
         mac_snap_left: mac_snap_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(LEFT))>;
+            bindings = <&kp LG(LC(LEFT))>;
         };
         mac_snap_right: mac_snap_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(RIGHT))>;
+            bindings = <&kp LG(LC(RIGHT))>;
         };
         mac_snap_up: mac_snap_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(UP))>;
+            bindings = <&kp LG(LC(UP))>;
         };
         mac_snap_down: mac_snap_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(DOWN))>;
+            bindings = <&kp LG(LC(DOWN))>;
         };
 
         // Common macros - Windows versions

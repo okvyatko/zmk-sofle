@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofle Keyboard - Desk Reference</title>
+    <style>
+        @media print {
+            body { margin: 0.5in; font-size: 10px; }
+            .page-break { page-break-before: always; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 11in;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.3;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .keyboard-layout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            gap: 30px;
+        }
+        
+        .half {
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2px;
+        }
+        
+        .key {
+            width: 35px;
+            height: 30px;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 8px;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .key-main { color: #000; font-size: 10px; }
+        .key-fn { color: #0066cc; font-size: 7px; }
+        
+        .layer0 { background-color: #e6f2ff; border-color: #0066cc; }
+        .layer1 { background-color: #f0fff0; border-color: #009900; }
+        .system { background-color: #fff9e6; border-color: #ff9900; }
+        .windows { background-color: #ffe6e6; border-color: #cc0000; }
+        
+        .encoder {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid #666;
+            background: #f0f0f0;
+            font-size: 6px;
+        }
+        
+        .nav-cluster {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1px;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .nav-key {
+            border: 1px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            background: #f9f9f9;
+        }
+        
+        .nav-center { grid-column: 2; grid-row: 2; background: #e0e0e0; }
+        .nav-up { grid-column: 2; grid-row: 1; }
+        .nav-down { grid-column: 2; grid-row: 3; }
+        .nav-left { grid-column: 1; grid-row: 2; }
+        .nav-right { grid-column: 3; grid-row: 2; }
+        
+        .thumb-cluster {
+            display: flex;
+            gap: 2px;
+            margin-top: 10px;
+        }
+        
+        .thumb-key {
+            width: 45px;
+            height: 30px;
+            transform: rotate(-15deg);
+            transform-origin: center;
+        }
+        
+        .thumb-key.right {
+            transform: rotate(15deg);
+        }
+        
+        .legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #333;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9px;
+            margin: 10px 0;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 3px;
+            text-align: center;
+        }
+        
+        th { background-color: #f0f0f0; font-weight: bold; }
+        
+        .section-title {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            margin: 15px 0 10px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎹 Sofle Keyboard - Desk Reference</h1>
+        <h3>BYOU Layout | Dual-OS Support | Quick Print Guide</h3>
+    </div>
+
+    <div class="section-title" style="background-color: #0066cc;">COMBINED VIEW - MAC BASE (Layer 0) + FUNCTIONS (Layer 1)</div>
+    
+    <div class="keyboard-layout">
+        <!-- Left Half -->
+        <div class="half">
+            <!-- Row 1 -->
+            <div class="key layer0">
+                <div class="key-main">ESC</div>
+                <div class="key-fn">`</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">1</div>
+                <div class="key-fn">F1</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">2</div>
+                <div class="key-fn">F2</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">3</div>
+                <div class="key-fn">F3</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">4</div>
+                <div class="key-fn">F4</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">5</div>
+                <div class="key-fn">F5</div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="key layer0">
+                <div class="key-main">TAB</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">B</div>
+                <div class="key-fn">⌘A</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">Y</div>
+                <div class="key-fn">⌘C</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">O</div>
+                <div class="key-fn">⌘V</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">U</div>
+                <div class="key-fn">⌘X</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">'</div>
+                <div class="key-fn">⌘Z</div>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="key layer0">
+                <div class="key-main">SHIFT</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">C</div>
+                <div class="key-fn">~</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">I</div>
+                <div class="key-fn">L-CLK</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">E</div>
+                <div class="key-fn">M-CLK</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">A</div>
+                <div class="key-fn">R-CLK</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">,</div>
+                <div class="key-fn">MB4</div>
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="key layer0">
+                <div class="key-main">CAPS</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">G</div>
+                <div class="key-fn">RGB↓</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">X</div>
+                <div class="key-fn">RGB↑</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">J</div>
+                <div class="key-fn">EFF</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">K</div>
+                <div class="key-fn">EFR</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">ALT</div>
+                <div class="key-fn">SPI</div>
+            </div>
+            
+            <!-- Row 5 - Thumb Cluster -->
+            <div class="key layer0 thumb-key">
+                <div class="key-main">BSPC</div>
+                <div class="key-fn">MUTE</div>
+            </div>
+            <div class="key layer0 thumb-key">
+                <div class="key-main">VOL-</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0 thumb-key">
+                <div class="key-main">VOL+</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0 thumb-key">
+                <div class="key-main">BSPC</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0 thumb-key">
+                <div class="key-main">SPACE</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer1 thumb-key">
+                <div class="key-main">FN1</div>
+                <div class="key-fn">HOLD</div>
+            </div>
+        </div>
+
+        <!-- Nav Cluster -->
+        <div class="nav-cluster">
+            <div class="nav-key nav-up">
+                <div class="key-main">↑</div>
+                <div class="key-fn" style="color: #0066cc;">TOP½</div>
+            </div>
+            <div class="nav-key nav-left">
+                <div class="key-main">←</div>
+                <div class="key-fn" style="color: #0066cc;">LEFT½</div>
+            </div>
+            <div class="nav-key nav-center encoder">VOL</div>
+            <div class="nav-key nav-right">
+                <div class="key-main">→</div>
+                <div class="key-fn" style="color: #0066cc;">RIGHT½</div>
+            </div>
+            <div class="nav-key nav-down">
+                <div class="key-main">↓</div>
+                <div class="key-fn" style="color: #0066cc;">BOT½</div>
+            </div>
+        </div>
+
+        <!-- Right Half -->
+        <div class="half">
+            <!-- Row 1 -->
+            <div class="key layer0">
+                <div class="key-main">6</div>
+                <div class="key-fn">F6</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">7</div>
+                <div class="key-fn">F7</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">8</div>
+                <div class="key-fn">F8</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">9</div>
+                <div class="key-fn">F9</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">0</div>
+                <div class="key-fn">F10</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">DEL</div>
+                <div class="key-fn">DEL</div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="key layer0">
+                <div class="key-main">;</div>
+                <div class="key-fn">PgUp</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">L</div>
+                <div class="key-fn">End</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">D</div>
+                <div class="key-fn">↑</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">W</div>
+                <div class="key-fn">Home</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">V</div>
+                <div class="key-fn">-</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">Z</div>
+                <div class="key-fn">=</div>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="key layer0">
+                <div class="key-main">.</div>
+                <div class="key-fn">PgDn</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">H</div>
+                <div class="key-fn">←</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">T</div>
+                <div class="key-fn">↓</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">S</div>
+                <div class="key-fn">→</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">N</div>
+                <div class="key-fn">[</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">Q</div>
+                <div class="key-fn">]</div>
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="key layer0">
+                <div class="key-main">/</div>
+                <div class="key-fn">BR+</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">R</div>
+                <div class="key-fn">BR-</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">M</div>
+                <div class="key-fn">INS</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">F</div>
+                <div class="key-fn">F11</div>
+            </div>
+            <div class="key layer0">
+                <div class="key-main">P</div>
+                <div class="key-fn">F12</div>
+            </div>
+            <div class="key windows">
+                <div class="key-main">MUTE</div>
+                <div class="key-fn">→WIN</div>
+            </div>
+            
+            <!-- Row 5 - Thumb Cluster -->
+            <div class="key layer0 thumb-key right">
+                <div class="key-main">SPACE</div>
+                <div class="key-fn">L-CLK</div>
+            </div>
+            <div class="key layer0 thumb-key right">
+                <div class="key-main">CMD</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0 thumb-key right">
+                <div class="key-main">SHIFT</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0 thumb-key right">
+                <div class="key-main">ENTER</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key layer0 thumb-key right">
+                <div class="key-main">CTRL</div>
+                <div class="key-fn">—</div>
+            </div>
+            <div class="key system thumb-key right">
+                <div class="key-main">FN2</div>
+                <div class="key-fn">HOLD</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div>
+            <div class="legend-item">
+                <div class="legend-color layer0"></div>
+                <span><strong>Layer 0:</strong> Mac Base (Black text)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color layer1"></div>
+                <span><strong>Layer 1:</strong> Mac Functions (Blue text)</span>
+            </div>
+        </div>
+        <div>
+            <div class="legend-item">
+                <div class="legend-color system"></div>
+                <span><strong>System:</strong> Bluetooth/Controls</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color windows"></div>
+                <span><strong>Windows:</strong> OS Switch</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title" style="background-color: #009900;">QUICK ACTIONS</div>
+    
+    <div class="quick-actions">
+        <div>
+            <h4>🔄 OS Switching</h4>
+            <table>
+                <tr><th>Action</th><th>Keys</th></tr>
+                <tr><td>Mac → Windows</td><td>FN1 + F12</td></tr>
+                <tr><td>Windows → Mac</td><td>FN4 + F12</td></tr>
+            </table>
+
+            <h4>📋 Text Operations (Mac)</h4>
+            <table>
+                <tr><th>Action</th><th>Keys</th></tr>
+                <tr><td>Select All</td><td>FN1 + B</td></tr>
+                <tr><td>Copy</td><td>FN1 + Y</td></tr>
+                <tr><td>Paste</td><td>FN1 + O</td></tr>
+                <tr><td>Cut</td><td>FN1 + U</td></tr>
+                <tr><td>Undo</td><td>FN1 + '</td></tr>
+            </table>
+        </div>
+        
+        <div>
+            <h4>🪟 Window Management (Mac)</h4>
+            <table>
+                <tr><th>Action</th><th>Keys</th></tr>
+                <tr><td>Top Half</td><td>FN1 + ↑</td></tr>
+                <tr><td>Bottom Half</td><td>FN1 + ↓</td></tr>
+                <tr><td>Left Half</td><td>FN1 + ←</td></tr>
+                <tr><td>Right Half</td><td>FN1 + →</td></tr>
+            </table>
+            
+            <h4>📶 Bluetooth (FN2)</h4>
+            <table>
+                <tr><th>Action</th><th>Keys</th></tr>
+                <tr><td>Profile 1-5</td><td>FN2 + 1-5</td></tr>
+                <tr><td>Clear Profile</td><td>FN2 + B</td></tr>
+                <tr><td>Clear All</td><td>FN2 + Y</td></tr>
+                <tr><td>USB Mode</td><td>FN2 + C</td></tr>
+                <tr><td>BLE Mode</td><td>FN2 + I</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="section-title" style="background-color: #cc0000;">WINDOWS MODE LAYERS</div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+        <div>
+            <h4>🔴 Layer 3 - Windows Base</h4>
+            <p><strong>Same layout as Mac base, but:</strong></p>
+            <ul style="font-size: 10px;">
+                <li>CMD → WIN key</li>
+                <li>FN1 → FN4 (Windows functions)</li>
+                <li>All other keys identical</li>
+            </ul>
+            
+            <h4>📋 Text Operations (Windows)</h4>
+            <table>
+                <tr><th>Action</th><th>Keys</th></tr>
+                <tr><td>Select All</td><td>FN4 + B (Ctrl+A)</td></tr>
+                <tr><td>Copy</td><td>FN4 + Y (Ctrl+C)</td></tr>
+                <tr><td>Paste</td><td>FN4 + O (Ctrl+V)</td></tr>
+                <tr><td>Cut</td><td>FN4 + U (Ctrl+X)</td></tr>
+                <tr><td>Undo</td><td>FN4 + ' (Ctrl+Z)</td></tr>
+            </table>
+        </div>
+        
+        <div>
+            <h4>🟠 Layer 4 - Windows Functions</h4>
+            <p><strong>Same as Mac functions, but:</strong></p>
+            <ul style="font-size: 10px;">
+                <li>Native Win10/11 snapping</li>
+                <li>Ctrl shortcuts (not Cmd)</li>
+                <li>F12 → Switch to Mac</li>
+            </ul>
+            
+            <h4>🪟 Window Management (Windows)</h4>
+            <table>
+                <tr><th>Action</th><th>Keys</th></tr>
+                <tr><td>Maximize</td><td>FN4 + ↑ (Win+↑)</td></tr>
+                <tr><td>Minimize</td><td>FN4 + ↓ (Win+↓)</td></tr>
+                <tr><td>Left Half</td><td>FN4 + ← (Win+←)</td></tr>
+                <tr><td>Right Half</td><td>FN4 + → (Win+→)</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title" style="background-color: #ff9900;">EMERGENCY & TROUBLESHOOTING</div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+            <h4>🚨 Emergency Reset</h4>
+            <table>
+                <tr><th>Problem</th><th>Solution</th></tr>
+                <tr><td>Keys not working</td><td>FN2 + G (Soft Reset)</td></tr>
+                <tr><td>Need to reflash</td><td>FN2 + J (Bootloader)</td></tr>
+                <tr><td>BT won't pair</td><td>FN2 + B (Clear profile)</td></tr>
+                <tr><td>Complete reset</td><td>Flash settings_reset.uf2</td></tr>
+            </table>
+            
+            <h4>😴 Sleep Mode</h4>
+            <p><strong>Activate:</strong> Press G + A + Q together (2 sec)<br>
+            <strong>Wake:</strong> Press reset button once</p>
+        </div>
+        
+        <div>
+            <h4>💡 Pro Tips</h4>
+            <ul style="font-size: 10px;">
+                <li><strong>Two Space Keys:</strong> Use either thumb</li>
+                <li><strong>Volume:</strong> Encoder knob or Vol keys</li>
+                <li><strong>Delete vs Backspace:</strong> DEL = top right, BSPC = thumb</li>
+                <li><strong>Mouse Click:</strong> Available on FN layers center thumb</li>
+                <li><strong>RGB Effects:</strong> FN1 + G/X for on/off, J/K for effects</li>
+            </ul>
+            
+            <h4>📚 Setup Notes</h4>
+            <ul style="font-size: 10px;">
+                <li><strong>Mac Window Snapping:</strong> Native support (Globe+Ctrl+Arrows)</li>
+                <li><strong>Windows Snapping:</strong> Works natively in Win10/11</li>
+                <li><strong>Flash Order:</strong> Always RIGHT half first, then LEFT</li>
+                <li><strong>5 BT Profiles:</strong> Can connect to 5 different devices</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; font-size: 10px; border-top: 1px solid #ccc; padding-top: 10px;">
+        <strong>Sofle BYOU Layout | 5 Layers | 5 BT Profiles | Dual-OS Support | Last Updated: Nov 2025</strong>
+    </div>
+</body>
+</html>
